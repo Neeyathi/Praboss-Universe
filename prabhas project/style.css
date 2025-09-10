@@ -1,0 +1,190 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Cover section */
+.cover {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/prabhas-crazy.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: flex-end; /* bottom center */
+  justify-content: center;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.cover-text {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  animation: fadeSlideIn 2s ease forwards;
+  pointer-events: none; /* So text doesn't block input */
+}
+
+.cover-text h1 {
+  font-size: 3.2em;
+  margin: 0;
+  text-shadow: 0 0 10px #000;
+}
+
+.cover-text p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  text-shadow: 0 0 8px #000;
+}
+.cover {
+  position: relative;
+  /* Your existing background styles */
+}
+
+/* Center the cover text vertically & horizontally */
+.cover-text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  pointer-events: none; /* So it doesn't block input clicks */
+  animation: fadeSlideInUp 2s ease forwards;
+  max-width: 90vw;
+  padding: 0 20px;
+}
+
+.cover-text-center h1 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 0 0 15px #000;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.cover-text-center p {
+  font-size: 1.3em;
+  margin-top: 12px;
+  text-shadow: 0 0 12px #000;
+  font-weight: 400;
+}
+
+/* Animation: fade in with slight slide up */
+@keyframes fadeSlideInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Make sure your cover has position relative to position absolute children */
+.cover {
+  position: relative;
+}
+
+/* Remove any .cover-content container, search bar alone */
+#searchCover {
+  width: 80%;
+  max-width: 800px;
+  padding: 15px 20px;
+  font-size: 1.5em;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0 4px 16px #222a;
+  outline: none;
+  background: #fff;
+  color: #333;
+  #searchCover {
+  animation: pulseGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px #fff7;
+  }
+  100% {
+    box-shadow: 0 0 18px #fff;
+  }
+}
+
+}
+
+/* Gallery grid */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 5vw 70px 5vw;
+}
+
+/* Card for images and vids */
+.card {
+  width: 260px;
+  background: #23252b;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px #222c;
+}
+
+/* Image inside card */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #1a1a1b;
+  border-radius: 14px 14px 0 0;
+}
+
+/* Video iframe in card */
+.card iframe {
+  width: 100%;
+  height: 160px;
+  border-radius: 14px 14px 0 0;
+  display: block;
+  border: none;
+}
+
+/* Caption text */
+.caption {
+  padding: 15px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
